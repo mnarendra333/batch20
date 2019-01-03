@@ -2,7 +2,7 @@
 public class MathOperations {
 
 	
-	public void sum(int x, int y){
+	public void sum(double x, double y){
 		System.out.println("sum of 2 no's "+(x+y));
 	}
 	
@@ -15,7 +15,7 @@ public class MathOperations {
 	public static void main(String[] args) {
 		
 		MathOperations obj  = new MathOperations();
-		obj.sum(10, 20);
+		obj.sum(10l, 20l);
 		obj.sum(10, 20,30);
 
 	}
