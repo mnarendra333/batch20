@@ -1,4 +1,7 @@
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class SetDemo {
@@ -8,12 +11,25 @@ public class SetDemo {
 
 		
 		
-		HashSet obj = new HashSet();
-		obj.add(10);
-		obj.add(20);
-		obj.add(10);
+		HashMap<String,List<String>> map = new HashMap<String, List<String>>();
 		
-		System.out.println(obj);
+		
+		List<String> list = new ArrayList<String>();
+		list.add("wish");
+		list.add("hello");
+		list.add("welcome");
+		map.put("hi", list);
+		
+		map.put("hello",Arrays.asList("hi","wish"));
+		
+		
+		System.out.println(map);
+		
+		
+		System.out.println(map.get("hi"));
+		
+		
+		
 	}
 
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class ArrayListDemo {
@@ -7,17 +8,37 @@ public class ArrayListDemo {
 		// TODO Auto-generated method stub
 		
 		
-		ArrayList obj = new ArrayList();
+		//ArrayList obj = new ArrayList(100);
 		
-		for (int i = 10; i <=200; i+=10) {
+		
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		ll.add(800);
+		ll.add(900);
+		
+		
+		ll.addFirst(500);
+		
+		
+		
+		System.out.println(ll);
+		
+		
+		/*ArrayList<Integer> al = new ArrayList<Integer>(ll);
+		System.out.println(al);
+		*/
+		
+		
+		
+		
+		/*for (int i = 1; i <=101; i=i+1) {
 			obj.add(i);
 		}
 		
-		System.out.println(obj);
+		System.out.println(obj);*/
 		
 		///obj.clear();
 		//if(obj.size()>0 && obj.contains(190))
-		obj.remove(new Integer(190));
+		/*obj.remove(new Integer(190));
 		System.out.println(obj);
 		
 		
@@ -25,12 +46,12 @@ public class ArrayListDemo {
 		
 		
 		obj.set(2, 99);
-		System.out.println(obj);
+		System.out.println(obj);*/
 		
 		
 		
-		obj.add(200);
-		System.out.println(obj);
+		/*obj.add(200);
+		System.out.println(obj);*/
 		
 		/*
 		Object obj1[] = {10,20,30,40,50};
