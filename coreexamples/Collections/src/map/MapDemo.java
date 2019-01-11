@@ -38,7 +38,7 @@ public class MapDemo {
 			System.out.println(i1);
 		}
 		
-		map.putAll(map2);
+		//map.putAll(map2);
 		Set<Entry<Integer, String>> entrySet = map.entrySet();
 		
 		for(Entry<Integer,String> entry:entrySet){
