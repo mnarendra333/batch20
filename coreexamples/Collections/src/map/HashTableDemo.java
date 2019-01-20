@@ -15,6 +15,9 @@ public class HashTableDemo {
 		ht.put(78, "meghaana");
 		ht.put(87, "john");
 		
+		
+		
+		
 		System.out.println(ht);
 
 	}
