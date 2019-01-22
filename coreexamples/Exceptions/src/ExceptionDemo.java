@@ -23,21 +23,22 @@ public class ExceptionDemo {
 		System.out.println(charArray[index]);
 		
 		//NumberFormatException
-		String s2 = "ravi";
-		int i1=0;
-		
-			if(!(s2 instanceof String))
-			i1 = Integer.parseInt(s2);
-		System.out.println(i1);
+		/*String s2 = "ravi";
+		int y = Integer.parseInt(s2);
+		System.out.println(y);*/
 		
 		//java.lang.ClassCastException:
 		/*Object obj = new Object(); // Object obj = new String("hello");
 		String s4 = (String)obj;
-		System.out.println(s4);
-		*/
+		System.out.println(s4);*/
 		
 		
-		Scanner sc = new Scanner(System.in);
+		
+		Object obj6 = new Object();
+		Integer myname = (Integer)obj6;
+		System.out.println(myname);
+		
+		/*Scanner sc = new Scanner(System.in);
 		System.out.println("enter denominator value");
 		int denominator = sc.nextInt();
 		
@@ -51,7 +52,7 @@ public class ExceptionDemo {
 			
 			
 			int cube  = 10*10*10;
-			System.out.println(cube);
+			System.out.println(cube);*/
 		
 		
 		
