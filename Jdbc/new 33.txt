@@ -1,0 +1,67 @@
+SQL> create table employee_tabl(id number(10) primary key,name varchar2(20),sal number(8,4));
+
+Table created.
+
+SQL> desc emp0loyee_tabl
+ERROR:
+ORA-04043: object emp0loyee_tabl does not exist
+
+
+SQL> desc employee_tabl
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ SAL                                                NUMBER(8,4)
+
+SQL> alter table employee_tabl add address varchar2(40);
+
+Table altered.
+
+SQL> desc employee_tabl
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ SAL                                                NUMBER(8,4)
+ ADDRESS                                            VARCHAR2(40)
+
+SQL> alter table employee_tabl modify column address(50);
+alter table employee_tabl modify column address(50)
+                                                  *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table employee_tabl modify column address varchaar2(50);
+alter table employee_tabl modify column address varchaar2(50)
+                                                *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table employee_tabl modify column address varchar2(50);
+alter table employee_tabl modify column address varchar2(50)
+                                                *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table employee_tabl modify  address varchar2(50);
+
+Table altered.
+
+SQL> alter table employee_tabl drop column address;
+
+Table altered.
+
+SQL> alter table employee_tabl rename sal to salary;
+alter table employee_tabl rename sal to salary
+                                 *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword
+
+
+SQL> alter table employee_tabl rename column sal to salary;
+
+Table altered.
