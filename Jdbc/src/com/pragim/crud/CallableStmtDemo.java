@@ -20,7 +20,7 @@ public class CallableStmtDemo {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("enter emp no");
 			cstmt.setInt(1, sc.nextInt());
-			cstmt.registerOutParameter(2, Types.VARCHAR);
+			cstmt.registerOutParameter(2, Types.NVARCHAR);
 			cstmt.registerOutParameter(3, Types.NUMERIC);
 			
 			

@@ -18,7 +18,7 @@ public class InsertDemo {
 			System.out.println(connection.getClass());
 			
 			Statement stmt = connection.createStatement();
-			int res = stmt.executeUpdate("update empl set sal=5000 where id=106");
+			int res = stmt.executeUpdate("delete from empl where sal=70000");
 			System.out.println(res + "records updataed");
 		} catch (Exception e) {
 			e.printStackTrace();
