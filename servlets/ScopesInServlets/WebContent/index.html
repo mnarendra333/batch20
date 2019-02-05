@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<style>
+.regForm {
+	height: 250px;
+	background-color: cyan;
+	width: 300px;
+	border-radius: 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.textFiled {
+	height: 30px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+}
+
+.subBtn {
+	
+	height: 40px;
+	width: 80px;
+	border-radius: 10px;
+}
+</style>
+
+<script type="text/javascript">
+
+
+	function validateReg(){
+		//alert("inside function");
+		
+		var name = regform.uname.value;
+		var age = regform.age.value;
+		var phno = regform.phoneno.value;
+		
+		
+		if(name == ""){
+			alert("please enter name");
+			regform.uname.focus();
+			return false;
+		}
+		if(age == ""){
+			alert("please enter age");
+			regform.age.focus();
+			return false;
+		}
+		if(phno == ""){
+			alert("please enter phone no");
+			regform.phoneno.focus();
+			return false;
+		}
+		
+		return true;
+		
+		
+	}
+	
+
+
+</script>
+</head>
+<body>
+
+
+	<h2>Reg Form</h2>
+
+	<form action="srv1" method="post" name="regform" onsubmit="return validateReg();">
+
+		<div class="regForm">
+
+
+			<table>
+
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="uname" class="textFiled"></td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td><input type="text" name="age" class="textFiled"></td>
+				</tr>
+				<tr>
+					<td>PhoneNo</td>
+					<td><input type="number" name="phoneno" class="textFiled"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="store" class="subBtn"></td>
+				</tr>
+
+
+			</table>
+		</div>
+
+	</form>
+
+</body>
+</html>
