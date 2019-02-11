@@ -2,6 +2,7 @@ package com.pragim.sessionwithcookies.ctrl;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,19 +36,19 @@ public class SecondServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
+	
 		
-		String skill = request.getParameter("skill");
-		String exp = request.getParameter("exp");
-		
-		/*Map<String, String[]> req2 = new HashMap<String, String[]>();
-		req2 = request.getParameterMap();*/
 		
 		HttpSession session = request.getSession();
-		session.setAttribute("skill", skill);
-		session.setAttribute("exp", exp);
-		System.out.println(session.getId());
+		Enumeration<String> parameterNames = request.getParameterNames();
+		while (parameterNames.hasMoreElements()) {
+			String string = (String) parameterNames.nextElement();
+			Map<String, String[]> parameterMap = request.getParameterMap();
+			session.setAttribute(string, parameterMap.get(string));
+			
+		}
 		
-		//session.setAttribute("form2", req2);
+		
 		
 		out.println("<body><form action=tsrv><table><tr><td>Prefered Loc</td><td><select name=loc multiselect><option>bangl</option>");
 		out.println("<option>chenni</option><option>hyd</option></select></td></tr>");

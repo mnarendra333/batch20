@@ -53,7 +53,7 @@ public class FirstServlet extends HttpServlet {
 		session.setAttribute("form1", req1);
 		
 		
-		out.println("<body><form action=ssrv><table><tr><td>Skills</td><td><select name=skill><option>JAVA&&J2EE</option>");
+		out.println("<body><form action="+response.encodeUrl("ssrv")+"><table><tr><td>Skills</td><td><select name=skill><option>JAVA&&J2EE</option>");
 		out.println("<option>HTML</option><option>JS</option></select></td></tr>");
 		out.println("<tr><td>Exp</td><td><input type=text name=exp></td></tr>");
 		out.println("<tr><td><input type=submit value=continue></td></tr></table></form></body>");
