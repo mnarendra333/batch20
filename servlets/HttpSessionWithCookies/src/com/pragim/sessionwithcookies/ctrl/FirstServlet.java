@@ -6,6 +6,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,6 +34,7 @@ public class FirstServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		
+		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		Map<String, String[]> req1 = new HashMap<String, String[]>();
@@ -53,7 +55,7 @@ public class FirstServlet extends HttpServlet {
 		session.setAttribute("form1", req1);
 		
 		
-		out.println("<body><form action=ssrv><table><tr><td>Skills</td><td><select name=skill><option>JAVA&&J2EE</option>");
+		out.println("<body><form action="+response.encodeUrl("ssrv")+"><table><tr><td>Skills</td><td><select name=skill><option>JAVA&&J2EE</option>");
 		out.println("<option>HTML</option><option>JS</option></select></td></tr>");
 		out.println("<tr><td>Exp</td><td><input type=text name=exp></td></tr>");
 		out.println("<tr><td><input type=submit value=continue></td></tr></table></form></body>");

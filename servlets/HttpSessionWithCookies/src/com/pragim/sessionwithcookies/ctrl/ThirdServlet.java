@@ -2,6 +2,10 @@ package com.pragim.sessionwithcookies.ctrl;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -66,12 +70,67 @@ public class ThirdServlet extends HttpServlet {
 		}*/
 		
 		
+		//current form
+		String location = request.getParameter("loc");
+		String salary = request.getParameter("sal");
 		
 		HttpSession session = request.getSession(false);
-		String name = (String)session.getAttribute("uname");
-		out.print("name is "+name);
 		
-		session.invalidate();
+		//form-1
+		if(session!=null){
+		String name = (String)session.getAttribute("uname");
+		String age = (String)session.getAttribute("age");
+		String dob = (String)session.getAttribute("dob");
+		String gen = (String)session.getAttribute("gender");
+		String hobbies = (String)session.getAttribute("hobbies");
+		String address = (String)session.getAttribute("addr");
+		String country = (String)session.getAttribute("country");
+		String state = (String)session.getAttribute("state");
+		
+		//form-2
+		String skill = (String)session.getAttribute("skill");
+		String exp = (String)session.getAttribute("exp");
+		
+		
+		
+		
+		
+		Connection connection = ConnectionUtility.getConnectionFromOracle();
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement("insert into reg_table values(regi_seq.nextval,?,?,?,?,?,?,?,?,?,?,?,?)");
+			pstmt.setString(1, name);
+			pstmt.setInt(2, Integer.parseInt(age));
+			
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+			Date parse = sdf.parse(dob);
+			java.sql.Date dobDate = new java.sql.Date(parse.getTime());
+			
+			pstmt.setDate(3, dobDate);
+			pstmt.setString(4, gen);
+			pstmt.setString(5, hobbies);
+			pstmt.setString(6, address);
+			pstmt.setString(7, country);
+			pstmt.setString(8, state);
+			pstmt.setString(9, skill);
+			pstmt.setInt(10, Integer.parseInt(exp));
+			pstmt.setString(11, location);
+			pstmt.setInt(12, Integer.parseInt(salary));
+		
+			int executeUpdate = pstmt.executeUpdate();
+			
+			if(executeUpdate>0)
+				out.println("<h1><font color='green'>Reg Completed Successfully</font></h1>");
+			
+			session.invalidate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		}else{
+			out.println("Session is blocked");
+		}
 		
 		
 		

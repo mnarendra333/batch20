@@ -9,6 +9,11 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  	<param-name>key1</param-name>
+  	<param-value></param-value>
+  </context-param>
   <servlet>
     <description></description>
     <display-name>FirstServlet</display-name>
@@ -39,4 +44,14 @@
     <servlet-name>ThirdServlet</servlet-name>
     <url-pattern>/tsrv</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>com.pragim.listner.MyServletReqListner</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.pragim.listner.MyContextListner</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.pragim.listner.MySessionListner</listener-class>
+  </listener>
+ 
 </web-app>

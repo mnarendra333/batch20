@@ -44,13 +44,13 @@ public class SecondServlet extends HttpServlet {
 		while (parameterNames.hasMoreElements()) {
 			String string = (String) parameterNames.nextElement();
 			Map<String, String[]> parameterMap = request.getParameterMap();
-			session.setAttribute(string, parameterMap.get(string));
+			session.setAttribute(string, parameterMap.get(string)[0]);
 			
 		}
 		
 		
 		
-		out.println("<body><form action=tsrv><table><tr><td>Prefered Loc</td><td><select name=loc multiselect><option>bangl</option>");
+		out.println("<body><form action="+response.encodeUrl("tsrv")+"><table><tr><td>Prefered Loc</td><td><select name=loc multiselect><option>bangl</option>");
 		out.println("<option>chenni</option><option>hyd</option></select></td></tr>");
 		out.println("<tr><td>Sal</td><td><input type=text name=sal></td></tr>");
 		out.println("<tr><td><input type=submit value=submit></td></tr></table></form></body>");
