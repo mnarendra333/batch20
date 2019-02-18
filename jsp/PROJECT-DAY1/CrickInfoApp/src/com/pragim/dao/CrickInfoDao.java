@@ -9,6 +9,14 @@ public interface CrickInfoDao {
 	
 	
 	public List<Teams> getTeamsInfo();
-	public List<Players> getPlayersInfo();
+	public List<Players> getPlayersInfo(String teamId);
+	
+	
+	public String deleteTeam(String teamId);
+	public String addTeam(Teams obj);
+	public Teams getTeamDataById(String teamId);
+	public String updateTeam(Teams obj);
+	
+	
 
 }
