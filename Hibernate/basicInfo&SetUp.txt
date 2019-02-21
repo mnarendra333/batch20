@@ -13,8 +13,6 @@ Adv Hibernate:
 4) relationships
 
 
-
-
 ORM
 ====
 jdo

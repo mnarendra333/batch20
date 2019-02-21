@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="pack1.Employee" table="emp_tab">
+	
+		<id name="empId" column="eid"/>
+		<property name="empName" column="ename" length="30"/>
+		<property name="sal" length="40"/>
+	
+	
+	</class>
+
+
+</hibernate-mapping>
