@@ -24,7 +24,8 @@ public class Client {
 		
 		//method-1 - selecting full object from DB
 		System.out.println("==================full object selection=====================");
-		Query query = session.createQuery("select p from Product p");
+		Query query = session.createQuery("select p from Product p where pId=?");
+		query.setParameter(0, 4);
 		List<Product> list = query.list();
 		
 		for (Product product : list) {
