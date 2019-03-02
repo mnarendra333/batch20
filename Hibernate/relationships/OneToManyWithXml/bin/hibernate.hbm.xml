@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.pragim.model.Parent" table="parent_tab">
+	
+		<id name="parId" column="par_id">
+			<generator class="sequence">
+				<param name="sequence">par_seq</param>
+			</generator>
+		</id>
+		<property name="parName" column="par_name" length="30"/>
+		<property name="age"/>
+		
+		
+		<set name="childs" cascade="all-delete-orphan">
+		    <key column="p_id"></key>
+			<one-to-many class="com.pragim.model.Child"/>
+		
+		
+		</set>
+	
+	</class>
+	
+	<class name="com.pragim.model.Child" table="child_tab">
+	
+		<id name="cId" column="c_id">
+		
+			<generator class="sequence">
+				<param name="sequence">child_seq</param>
+			</generator>
+		</id>
+		<property name="cName" column="c_name"></property>
+		
+		<property name="age"></property>
+	
+	</class>
+
+
+</hibernate-mapping>
