@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernatejars"/>
+	<classpathentry kind="lib" path="D:/java_softwares/hibernate-release-4.3.9.Final/hibernate-release-4.3.9.Final/lib/optional/ehcache/hibernate-ehcache-4.3.9.Final.jar" sourcepath="C:/Users/sapuser/AppData/Local/Temp/.org.sf.feeling.decompiler1551751145219/source/hibernate-ehcache-4.3.9.Final-sources.jar"/>
+	<classpathentry kind="lib" path="D:/java_softwares/hibernate-release-4.3.9.Final/hibernate-release-4.3.9.Final/lib/optional/ehcache/ehcache-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="D:/java_softwares/hibernate-release-4.3.9.Final/hibernate-release-4.3.9.Final/lib/optional/ehcache/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
