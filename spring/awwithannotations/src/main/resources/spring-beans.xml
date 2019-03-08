@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<context:annotation-config />
+	
+	<context:component-scan base-package="com.pragim"></context:component-scan>
+	<!-- <bean id="id1" class="com.pragim.hibautowiring.model.Person">
+		<property name="perId" value="101"/>
+		<property name="perName" value="raja"/>
+		<property name="addr" value="bangl"/>
+	</bean>
+	
+	<bean id="mobile" class="com.pragim.hibautowiring.model.Mobile">
+		<property name="model" value="5000"></property>
+		<property name="price" value="20000"></property>
+		<property name="name" value="samsung"></property>
+	</bean> -->
+	
+	
+
+
+</beans>
