@@ -37,6 +37,18 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=C:\Users\sapuser\Downloads\ojdbc7-12.1.0.2.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
